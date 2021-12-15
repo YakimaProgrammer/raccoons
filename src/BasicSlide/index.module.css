@@ -1,0 +1,12 @@
+.slide {
+  width: 100vw;
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+  transition: left 1.25s ease, opacity 2s ease;
+}
+
+.active {
+  left: 0;
+  opacity: 1;
+}

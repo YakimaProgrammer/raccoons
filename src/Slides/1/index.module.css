@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+}
+
+.coverImg {
+  margin: auto;
+  display: block;
+  width: 50vw;
+  height: auto;
+}
