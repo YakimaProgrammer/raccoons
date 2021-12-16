@@ -1,3 +1,5 @@
+import "./index.css";
+
 import { Slides } from "./Slides";
 
 import React from 'react';

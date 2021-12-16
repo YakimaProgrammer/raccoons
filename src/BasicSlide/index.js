@@ -9,13 +9,41 @@ function getNextId() {
   return currentId += 1;
 }
 
+/*
 const callbacks = {};
 
 const observer = new IntersectionObserver(
   ([entry]) => {
-    callbacks[entry.target.id]();
-  }, { rootMargin: '0px', threshold: 1.0 }
+    console.log(entry);
+    callbacks[entry.target.id](entry.intersectionRatio);
+  }, { threshold: 1 }
 );
+*/
+
+const callbacks = {};
+
+const watched = [];
+
+//Kind of a magic number
+const minVisible = 400;
+
+function onScroll() {
+  for (var elem of watched) {
+    var rect = elem.getBoundingClientRect();
+
+    if (
+//      rect.top >= 0 &&
+//      rect.left >= 0 &&
+      rect.bottom - minVisible <= (window.innerHeight || document.documentElement.clientHeight)// &&
+//      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    ) {
+      callbacks[elem.id]()
+    }
+  }
+}
+
+document.addEventListener("scroll", onScroll);
+window.addEventListener("load", onScroll)
 
 function VeryBasicSlide(props) {
   return (
@@ -53,6 +81,6 @@ export class BasicSlide extends Component {
   }
 
   componentDidMount() {
-    observer.observe(this.ref.current);
+    watched.push(this.ref.current);
   }
 }

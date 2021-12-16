@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+}
+
+.mapContainer {
+  width: 80%;
+  display: block;
+  height: auto;
+  margin: auto;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+}
+
+/* North America */
+.raccoon1 {
+  position: absolute;
+  width: 10%;
+  left: 18%;
+  top: 18%;
+}
+
+/* Europe */
+.raccoon2 {
+  position: absolute;
+  width: 8%;
+  left: 48%;
+  top: 13%;
+}
+
+/* Afria */
+.raccoon3 {
+  position: absolute;
+  width: 12%;
+  left: 50%;
+  top: 50%;
+}
+
+/* South America */
+.raccoon4 {
+  position: absolute;
+  width: 7%;
+  left: 31%;
+  top: 68%;
+}
+
+/* Cuba */
+.raccoon5 {
+  position: absolute;
+  width: 4%;
+  left: 27%;
+  top: 38%;
+}
+
+/* Japan */
+.raccoon6 {
+  position: absolute;
+  width: 3%;
+  left: 84%;
+  top: 26%;
+}
+
+/* Australia */
+.raccoon7 {
+  position: absolute;
+  width: 5%;
+  left: 85%;
+  top: 75%;
+}
+
+/* China */
+.raccoon8 {
+  position: absolute;
+  width: 8%;
+  left: 75%;
+  top: 23%;
+}
+
+/* Iran / east Middle East area */
+.raccoon9 {
+  position: absolute;
+  width: 5%;
+  left: 61%;
+  top: 25%;
+}
