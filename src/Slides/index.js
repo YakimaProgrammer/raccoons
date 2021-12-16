@@ -11,22 +11,6 @@ export function Slides(props) {
       <BasicSlide>
         <Slide2 />
       </BasicSlide>
-
-      <BasicSlide>
-        <Slide2 />
-      </BasicSlide>
-      <BasicSlide>
-        <Slide2 />
-      </BasicSlide>
-      <BasicSlide>
-        <Slide2 />
-      </BasicSlide>
-      <BasicSlide>
-        <Slide2 />
-      </BasicSlide>
-      <BasicSlide>
-        <Slide2 />
-      </BasicSlide>
     </div>
   )
 }
