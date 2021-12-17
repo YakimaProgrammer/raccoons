@@ -50,9 +50,7 @@ export class BasicSlideshow extends Component {
             (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
           }
         >
-          <div className={style.content} style={{"height": this.props.height}}>
-            {this.props.children[this.state.slide]}
-          </div>
+          {this.props.children.map((e, i) => <div className={(i === this.state.slide) ? null : style.noDisplay} key={i}>{e}</div>)}
         </div>
 
         <NavButton 
@@ -84,13 +82,4 @@ export class BasicSlideshow extends Component {
       this.onNavigationPress(1);
     }
   }
-}
-
-export function SimpleSlide(props) {
-  return (
-    <div className={style.simpleSlide}>
-        <img className={style.simpleSlideImg} src={props.src} alt={props.alt || ""} />
-        <p className={style.simpleSlideText}><b>{props.desc}</b></p>
-    </div>
-  )
 }

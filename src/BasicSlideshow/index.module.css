@@ -40,22 +40,6 @@
   display: table-cell;
 }
 
-.content {
-  display: block;
-}
-
-.simpleSlideImg {
-  max-width: 100%;
-  max-height: calc(100% - 52px); /* 52px is the height of one of the <p> elements */
-  margin: auto;
-  display: block;
-}
-
-.simpleSlideText {
-  text-align: center;
-  font-size: 16px;
-}
-
-.simpleSlide {
-  height: 100%;
+.noDisplay {
+  display: none;
 }
