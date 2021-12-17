@@ -83,4 +83,8 @@ export class BasicSlide extends Component {
   componentDidMount() {
     watched.push(this.ref.current);
   }
+
+  componentWillUnmount() {
+    watched.splice(watched.indexOf(this.ref.current), 1);
+  }
 }

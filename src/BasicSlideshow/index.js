@@ -89,8 +89,8 @@ export class BasicSlideshow extends Component {
 export function SimpleSlide(props) {
   return (
     <div className={style.simpleSlide}>
-      <img className={style.simpleSlideImg} src={props.src} alt={props.alt || ""} />
-      <p className={style.simpleSlideText}><b>{props.desc}</b></p>
+        <img className={style.simpleSlideImg} src={props.src} alt={props.alt || ""} />
+        <p className={style.simpleSlideText}><b>{props.desc}</b></p>
     </div>
   )
 }
