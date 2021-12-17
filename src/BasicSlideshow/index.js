@@ -33,32 +33,32 @@ export class BasicSlideshow extends Component {
 
   render() {
     return (
-      <div style={{"height": this.props.height, "display": "block", "width": "100%"}}>
-        <div 
-          onKeyDown={this.onNavigationKeyDown} 
-          className={style.asTable}
-          tabIndex="0"
-        >
-          <NavButton 
-            onClick={() => this.onNavigationPress(-1)} 
-            facing="left" 
-          />
+      <div 
+        onKeyDown={this.onNavigationKeyDown} 
+        className={style.asTable}
+        tabIndex="0"
+      >
+        <NavButton 
+          onClick={() => this.onNavigationPress(-1)} 
+          facing="left" 
+        />
 
-          <div 
-            className={
-              style.navContent + 
-              " " + 
-              (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
-            }
-          >
+        <div 
+          className={
+            style.navContent + 
+            " " + 
+            (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
+          }
+        >
+          <div className={style.content} style={{"height": this.props.height}}>
             {this.props.children[this.state.slide]}
           </div>
-
-          <NavButton 
-            onClick={() => this.onNavigationPress(1)} 
-            facing="right" 
-          />
         </div>
+
+        <NavButton 
+          onClick={() => this.onNavigationPress(1)} 
+          facing="right" 
+        />
       </div>
     )
   }
@@ -88,7 +88,7 @@ export class BasicSlideshow extends Component {
 
 export function SimpleSlide(props) {
   return (
-    <div>
+    <div className={style.simpleSlide}>
       <img className={style.simpleSlideImg} src={props.src} alt={props.alt || ""} />
       <p className={style.simpleSlideText}><b>{props.desc}</b></p>
     </div>
