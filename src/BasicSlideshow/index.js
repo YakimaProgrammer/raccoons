@@ -28,7 +28,9 @@ export class BasicSlideshow extends Component {
     this.onNavigationPress = this.onNavigationPress.bind(this);
     this.onNavigationKeyDown = this.onNavigationKeyDown.bind(this);
 
-    this.timer = setInterval(() => this.changeSlide(1), 5000);
+    if (!!this.props.slideChangeDelay) {
+      this.timer = setInterval(() => this.changeSlide(1), this.props.slideChangeDelay);
+    }
   }
 
   render() {
