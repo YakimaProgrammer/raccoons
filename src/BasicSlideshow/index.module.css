@@ -1,0 +1,52 @@
+.flipped {
+  transform: scaleX(-1);
+}
+
+.asTable {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.navButton {
+  width: 10%;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+}
+
+.asTable:hover .navButton {
+  opacity: 1;
+}
+
+.navButton > img {
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+
+.navContent{
+  width: 80%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.navButton, .navContent {
+  display: table-cell;
+}
+
+.simpleSlideImg {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.simpleSlideText {
+  text-align: center;
+}
