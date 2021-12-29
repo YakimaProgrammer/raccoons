@@ -15,74 +15,70 @@
   height: auto;
 }
 
-/* North America */
-.raccoon1 {
+.north_america {
   position: absolute;
   width: 10%;
-  left: 18%;
+  left: 17.5%;
   top: 18%;
 }
 
-/* Europe */
-.raccoon2 {
+.europe {
   position: absolute;
   width: 8%;
   left: 48%;
   top: 13%;
 }
 
-/* Afria */
-.raccoon3 {
+.south_africa {
   position: absolute;
   width: 12%;
   left: 50%;
   top: 50%;
 }
 
-/* South America */
-.raccoon4 {
+.south_america {
   position: absolute;
   width: 7%;
   left: 31%;
   top: 68%;
 }
 
-/* Cuba */
-.raccoon5 {
+.cuba {
   position: absolute;
   width: 4%;
   left: 27%;
   top: 38%;
 }
 
-/* Japan */
-.raccoon6 {
+.japan {
   position: absolute;
   width: 3%;
   left: 84%;
   top: 26%;
 }
 
-/* Australia */
-.raccoon7 {
+.australia {
   position: absolute;
   width: 5%;
   left: 85%;
   top: 75%;
 }
 
-/* China */
-.raccoon8 {
+.china {
   position: absolute;
   width: 8%;
   left: 75%;
   top: 23%;
 }
 
-/* Iran / east Middle East area */
-.raccoon9 {
+.east_middle_east_area {
   position: absolute;
   width: 5%;
   left: 61%;
   top: 25%;
+}
+
+/* img(1) -> the map, img(2) -> north america */
+.invasive > img:not(:first-child):not(:nth-child(2)) {
+  filter: invert(24%) sepia(99%) saturate(6982%) hue-rotate(1deg) brightness(101%) contrast(122%);
 }

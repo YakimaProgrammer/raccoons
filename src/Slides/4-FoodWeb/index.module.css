@@ -1,0 +1,32 @@
+.foods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.foods > img {
+  width: 64px;
+  height: auto;
+}
+
+.bigRaccoon {
+  width: 128px;
+  max-width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.arrows {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.arrow {
+  stroke:rgb(0,0,0);
+  stroke-width:2; 
+  marker-end:url(#markerArrow)
+}
