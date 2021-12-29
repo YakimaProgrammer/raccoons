@@ -36,23 +36,25 @@ import style from "./index.module.css";
 const prey = [style.acorn, style.bud, style.crayfish, style.grass, style.mussel, style.apple, style.bird, style.cherry, style.corn, style.fish, style.frog, style.insect, style.mouse, style.reptile, style.trash];
 const predators = [style.cougar, style.coyote, style.dog, style.hawk, style.owl, style.snake, style.person];
 
-export class PageLoadWatcher extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {pageLoaded: false};
-
-    if (document.readyState !== "complete") {
-      window.addEventListener("load", () => this.setState({pageLoaded: true}));
-    } else {
-      this.setState({pageLoaded: true})
+export function PageLoadWatcher(C){
+  return class extends Component {
+    constructor(props) {
+      super(props);
+  
+      this.state = {pageLoaded: false};
+  
+      if (document.readyState !== "complete") {
+        window.addEventListener("load", () => this.setState({pageLoaded: true}));
+      } else {
+        this.setState({pageLoaded: true})
+      }
+  
+      window.addEventListener("resize", () => {this.setState({pageLoaded: false}); this.setState({pageLoaded: true})});
     }
-
-    window.addEventListener("resize", () => {this.setState({pageLoaded: false}); this.setState({pageLoaded: true})});
-  }
-
-  render() {
-    return <this.props.component pageLoaded={this.state.pageLoaded} {...this.props} />
+  
+    render() {
+      return <C pageLoaded={this.state.pageLoaded} {...this.props} />
+    }
   }
 }
 
@@ -99,4 +101,4 @@ function Slide4Component(props) {
   )
 }
 
-export const Slide4 = () => <PageLoadWatcher component={Slide4Component} />;
+export const Slide4 = PageLoadWatcher(Slide4Component);
