@@ -1,7 +1,7 @@
 import { BasicSlide } from "../BasicSlide"
-import { Slide1 } from "./1";
-import { Slide2 } from "./2";
-import { Slide3 } from "./3";
+import { Slide1 } from "./1 - Picture";
+import { Slide2 } from "./2 - Distribution map";
+import { Slide3 } from "./3 - Habitat description";
 
 export function Slides(props) {
   return (

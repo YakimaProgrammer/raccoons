@@ -10,6 +10,17 @@ import tree from "./resources/slate.com/tree.webp";
   <SimpleSlide src={tree} desc="Raccoons are becoming increasingly prevalent in urban areas" alt="A raccoon stares at the camara while clinging to a tree. Buildings can be seen in the background." />
 */
 
+
+//https://images.wideopenpets.com/wp-content/uploads/2020/01/I-was-nominated-by-@shelby.the_.doxie-to-post-a-puppy-pic-92-770x405.jpg
+//https://www.pestworld.org/media/560906/istock_000007035875medium.jpg?preset=pestFeature1280
+function HabitatSheet(props) {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
 export function Slide3() {
   return (
     <div>
