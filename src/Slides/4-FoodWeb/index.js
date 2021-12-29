@@ -1,4 +1,5 @@
-import { LineTo } from 'react-lineto';
+import {default as LineTo} from "react-lineto";
+import { Component } from "react";
 
 //foods
 import acorn from "../../resources/flaticon.com/acorn.png";
@@ -32,42 +33,63 @@ import style from "./index.module.css";
 
 //https://www.maine.gov/ifw/docs/raccoon-speciesassessmant.pdf
 
-export function Slide4() {
-  return (
-    <div ref={this.imgsRef}>
-      <h2>Raccoon's role in the food web</h2>
-      <div className={style.foodsContainer}>
-        <div className={style.foods}>
-          <img src={acorn} alt="" />
-          <img src={bud} alt="" />
-          <img src={crayfish} alt="" />
-          <img src={grass} alt="" />
-          <img src={mussel} alt="" />
-          <img src={apple} alt="" />
-          <img src={bird} alt="" />
-          <img src={cherry} alt="" />
-          <img src={corn} alt="" />
-          <img src={fish} alt="" />
-          <img src={frog} alt="" />
-          <img src={insect} alt="" />
-          <img src={mouse} alt="" />
-          <img src={reptile} alt="" />
-          <img src={trash} alt="" />
+const prey = [style.acorn, style.bud, style.crayfish, style.grass, style.mussel, style.apple, style.bird, style.cherry, style.corn, style.fish, style.frog, style.insect, style.mouse, style.reptile, style.trash];
+const predators = [style.cougar, style.coyote, style.dog, style.hawk, style.owl, style.snake, style.person];
+
+//LineTo is rather finicky, so I have to micromanage it along a little bit
+export class Slide4 extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {pagedLoaded: false};
+
+    if (document.readyState !== "complete") {
+      window.addEventListener("load", () => this.setState({pagedLoaded: true}));
+    } else {
+      this.state.pagedLoaded = true;
+    }
+
+    window.addEventListener("resize", () => {this.setState({pagedLoaded: false}); this.setState({pagedLoaded: true})})
+  }
+  render() {
+    return (
+      <div>
+        <h2>Raccoons in the food web</h2>
+        <div className={style.foodsContainer}>
+          <div className={style.foods}>
+            <img src={acorn} className={style.acorn} alt='' />
+            <img src={bud} className={style.bud} alt='' />
+            <img src={crayfish} className={style.crayfish} alt='' />
+            <img src={grass} className={style.grass} alt='' />
+            <img src={mussel} className={style.mussel} alt='' />
+            <img src={apple} className={style.apple} alt='' />
+            <img src={bird} className={style.bird} alt='' />
+            <img src={cherry} className={style.cherry} alt='' />
+            <img src={corn} className={style.corn} alt='' />
+            <img src={fish} className={style.fish} alt='' />
+            <img src={frog} className={style.frog} alt='' />
+            <img src={insect} className={style.insect} alt='' />
+            <img src={mouse} className={style.mouse} alt='' />
+            <img src={reptile} className={style.reptile} alt='' />
+            <img src={trash} className={style.trash} alt='' />
+          </div>
         </div>
+
+        <img src={raccoon} className={style.bigRaccoon} alt="" />
+
+        <div className={style.foods}>
+          <img src={cougar} className={style.cougar} alt='' />
+          <img src={coyote} className={style.coyote} alt='' />
+          <img src={dog} className={style.dog} alt='' />
+          <img src={hawk} className={style.hawk} alt='' />
+          <img src={owl} className={style.owl} alt='' />
+          <img src={snake} className={style.snake} alt='' />
+          <img src={person} className={style.person} alt='' />
+        </div>
+
+        {this.state.pagedLoaded ? prey.map((p, index) => <LineTo key={index} from={p} to={style.bigRaccoon} delay={0} zIndex={-1} borderColor="black" />) : null}
+        {this.state.pagedLoaded ? predators.map((p, index) => <LineTo key={index} from={style.bigRaccoon} to={p} delay={0} zIndex={-1} borderColor="black" />) : null}
       </div>
-
-      <img src={raccoon} className={style.bigRaccoon} alt="" />
-
-      <div className={style.foods}>
-        <img src={cougar} alt="" />
-        <img src={coyote} alt="" />
-        <img src={dog} alt="" />
-        <img src={hawk} alt="" />
-        <img src={owl} alt="" />
-        <img src={snake} alt="" />
-        <img src={person} alt="" />
-      </div>
-
-    </div>
-  )
+    )
+  }
 }

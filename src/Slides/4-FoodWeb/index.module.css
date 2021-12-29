@@ -17,16 +17,6 @@
   margin: auto;
 }
 
-.arrows {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-.arrow {
-  stroke:rgb(0,0,0);
-  stroke-width:2; 
-  marker-end:url(#markerArrow)
+.acorn, .bud, .crayfish, .grass, .mussel, .apple, .bird, .cherry, .corn, .fish, .frog, .insect, .mouse, .reptile, .trash, .cougar, .coyote, .dog, .hawk, .owl, .snake, .person {
+  z-index: 1;
 }
