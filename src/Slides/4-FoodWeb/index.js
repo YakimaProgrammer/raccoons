@@ -1,5 +1,5 @@
 import {default as LineTo} from "react-lineto";
-import { Component } from "react";
+import { PageLoadWatcher } from "../../PageLoaderWatcher";
 
 //foods
 import acorn from "../../resources/flaticon.com/acorn.png";
@@ -35,28 +35,6 @@ import style from "./index.module.css";
 
 const prey = [style.acorn, style.bud, style.crayfish, style.grass, style.mussel, style.apple, style.bird, style.cherry, style.corn, style.fish, style.frog, style.insect, style.mouse, style.reptile, style.trash];
 const predators = [style.cougar, style.coyote, style.dog, style.hawk, style.owl, style.snake, style.person];
-
-export function PageLoadWatcher(C){
-  return class extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {pageLoaded: false};
-  
-      if (document.readyState !== "complete") {
-        window.addEventListener("load", () => this.setState({pageLoaded: true}));
-      } else {
-        this.setState({pageLoaded: true})
-      }
-  
-      window.addEventListener("resize", () => {this.setState({pageLoaded: false}); this.setState({pageLoaded: true})});
-    }
-  
-    render() {
-      return <C pageLoaded={this.state.pageLoaded} {...this.props} />
-    }
-  }
-}
 
 //LineTo is rather finicky, so I have to micromanage it along a little bit
 function Slide4Component(props) {

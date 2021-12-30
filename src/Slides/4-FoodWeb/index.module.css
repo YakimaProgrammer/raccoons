@@ -18,5 +18,6 @@
 }
 
 .acorn, .bud, .crayfish, .grass, .mussel, .apple, .bird, .cherry, .corn, .fish, .frog, .insect, .mouse, .reptile, .trash, .cougar, .coyote, .dog, .hawk, .owl, .snake, .person {
+  /* Kind of a no-op so that I can use these classes later on with react-lineto, without polluting the global namespace*/
   z-index: 1;
 }
