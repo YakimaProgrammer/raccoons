@@ -1,1 +1,8 @@
-All rights reserved. Copyright property of respective owners.
+All rights reserved
+
+stocksy.com.jpg - http://localhost:3000/static/media/stocksy.com.0bd3fe3016f2a92d0f11.jpg
+ncsu.edu.jpg - https://content.ces.ncsu.edu/media/images/Raccoon_Gaby_Muller_CC_BY-SA_3.jpg
+tarawildlife.com.webp - https://i0.wp.com/www.tarawildlife.com/wp-content/uploads/2017/07/raccoon-at-tara.jpg
+earthobservatory.nasa.gov.png - https://earthobservatory.nasa.gov/img/biome/graph-tdforest-knoxville.png
+nrcs.usda.gov.svg - Derived from https://www.nrcs.usda.gov/wps/wcm/connect/wcc/42ca01d7-a017-4e61-bc2a-54639a162a6c/wetsTable.gif?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_I28AH8S0KGC440A9C7TLS708D6-42ca01d7-a017-4e61-bc2a-54639a162a6c-mmLPAeK
+treehugger.com.webp - https://www.treehugger.com/thmb/mxFc3qEHnhKlnsgJi8RHResniFI=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__08__shutterstock_624246473-afd4e523ceed41d885444528857ca4f0.jpg

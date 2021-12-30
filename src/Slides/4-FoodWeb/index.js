@@ -1,6 +1,7 @@
 import {default as LineTo} from "react-lineto";
 import { PageLoadWatcher } from "../../PageLoaderWatcher";
 import { Citation } from "../12-SourcesCited";
+import { MoreDetails } from "../../MoreDetails";
 
 //foods
 import acorn from "../../resources/flaticon.com/acorn.png";
@@ -78,6 +79,8 @@ function Slide4Component(props) {
 
       {props.pageLoaded ? prey.map((p, index) => <LineTo key={index} from={p} to={style.bigRaccoon} delay={0} zIndex={-1} borderColor="black" />) : null}
       {props.pageLoaded ? predators.map((p, index) => <LineTo key={index} from={style.bigRaccoon} to={p} delay={0} zIndex={-1} borderColor="black" />) : null}
+
+      <MoreDetails>Raccoons are renowned for their ferocious tenacity - but they aren't apex predators either</MoreDetails>
     </div>
   )
 }

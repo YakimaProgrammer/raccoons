@@ -2,4 +2,5 @@
 .citationList > li > p {
   text-indent: -1em;
   margin-left: 2em;
+  overflow-wrap: break-word;
 }

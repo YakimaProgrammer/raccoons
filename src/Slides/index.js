@@ -19,6 +19,10 @@ export function Slides() {
       </BasicSlide>
 
       <BasicSlide>
+        <Slide3 />
+      </BasicSlide>
+
+      <BasicSlide>
         <Slide4 />
       </BasicSlide>
 

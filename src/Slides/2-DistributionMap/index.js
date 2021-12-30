@@ -26,7 +26,7 @@ export function RangeMap(props) {
 export function Slide2() {
   return (
     <div className={style.container}>
-      <h2>Range <Citation name="range" /></h2>
+      <h2>Range<Citation name="range" /></h2>
       <div className={style.narrowMapContainer}>
         <RangeMap />
       </div>

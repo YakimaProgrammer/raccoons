@@ -1,34 +1,72 @@
-import { SimpleSlide, BasicSlideshow } from "../../BasicSlideshow";
+import { Citation } from "../12-SourcesCited";
+import { BasicSlideshow } from "../../BasicSlideshow";
+import tableStyle from "../../resources/table.module.css";
+import style from "./index.module.css";
 
-import woodlands from "./resources/ecology.fnal.gov/woodland.jpg";
-import wetlands from "./resources/ecology.fnal.gov/wetland.jpg";
-import tree from "./resources/slate.com/tree.webp";
+import forest from "./resources/stocksy.com.jpg";
+import urban from "./resources/treehugger.com.webp";
+import farm from "./resources/tarawildlife.com.webp";
+import marsh from "./resources/ncsu.edu.jpg";
 
-/*
-  <SimpleSlide src={woodlands} desc="Woodland areas are one of the prefered habitats for raccoons" alt="A deciduous forest with leaf litter and a small pool of water." />
-  <SimpleSlide src={wetlands} desc="Raccoons can also be found in wetland areas" alt="A panorama of a marshy forest. A thick, still layer of water covers everything, broken up by the numberous trees and bushes dotting the landscape." />
-  <SimpleSlide src={tree} desc="Raccoons are becoming increasingly prevalent in urban areas" alt="A raccoon stares at the camara while clinging to a tree. Buildings can be seen in the background." />
-*/
+import forestChart from "./resources/earthobservatory.nasa.gov.png";
+import marshChart from "./resources/nrcs.usda.gov.svg";
 
-
-//https://images.wideopenpets.com/wp-content/uploads/2020/01/I-was-nominated-by-@shelby.the_.doxie-to-post-a-puppy-pic-92-770x405.jpg
-//https://www.pestworld.org/media/560906/istock_000007035875medium.jpg?preset=pestFeature1280
-function HabitatSheet(props) {
+function FastFacts(props) {
   return (
-    <div>
-
-    </div>
+    <ul>
+      {props.children}
+    </ul>
   )
 }
 
 export function Slide3() {
   return (
     <div>
-      <h2>Habitat</h2>
-      <BasicSlideshow>
-        <img width="100%" src={woodlands} />
-        <img width="100%" src={wetlands} />
-        <img width="100%" src={tree} />
+      <h2>Habitat<Citation name={["maine", "chesapeakebay"]} /></h2>
+      <BasicSlideshow slideChangeDelay={5000}>
+        <div className={style.habitatInfo}>
+          <h3>Forests</h3>
+          <div className={tableStyle.asTable}>
+            <div>
+              <img className={style.biomeExample} src={forest} />
+            </div>
+            <div>
+              <div className={style.overview}>
+                <img className={style.biomeExample} src={forestChart} />
+                <ul className={style.fastFacts}>
+                  <li>Moderate average temperatures</li>
+                  <li>Consistent, abundant rainfall</li>
+                  <li>Long, warm summers</li>
+                  <li>Cold winters</li>
+                  <li>Broad-leaf deciduous trees</li>
+                  <li>Slower rate of decomposition</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={style.habitatInfo}>
+          <h3>Urban Areas</h3>
+          <img className={style.biomeExample} src={urban} />
+        </div>
+
+        <div className={style.habitatInfo}>
+          <h3>Farms</h3>
+          <img className={style.biomeExample} src={farm} />
+        </div>
+
+        <div className={style.habitatInfo}>
+          <h3>Swamps &amp; Marshes</h3>
+          <div className={tableStyle.asTable}>
+            <div>
+              <img className={style.biomeExample} src={marsh} />
+            </div>
+            <div>
+            <img className={style.biomeExample} src={marshChart} />
+            </div>
+          </div>
+        </div>
       </BasicSlideshow>
     </div>
   )

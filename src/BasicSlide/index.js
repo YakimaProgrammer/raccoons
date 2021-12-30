@@ -63,7 +63,7 @@ export class BasicSlide extends Component {
     
     this.state = {isVisible: false};
     this.ref = createRef();
-    this.id = "Slide#" + getNextId();
+    this.id = "RaccoonProjectSlide#" + getNextId();
 
     callbacks[this.id] = () => {this.setState({isVisible: true})};
   }

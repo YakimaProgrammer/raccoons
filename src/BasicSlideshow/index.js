@@ -77,7 +77,6 @@ export class BasicSlideshow extends Component {
   }
 
   onNavigationKeyDown(event) {
-    console.log(event.key);
     if (event.key === "ArrowLeft") {
       this.onNavigationPress(-1);
     } else if (event.key === "ArrowRight" || event.key === " ") {
