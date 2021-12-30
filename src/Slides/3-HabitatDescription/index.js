@@ -73,7 +73,7 @@ export function Slide3() {
           </div>
         </div>
       </BasicSlideshow>
-      <MoreDetails>These masked bandits won't just eat just about anything - they'll also live just about anywhere with water as well!</MoreDetails>
+      <MoreDetails>These masked bandits won't just eat just about anything - they'll also live just about anywhere with water as well</MoreDetails>
     </div>
   )
 }

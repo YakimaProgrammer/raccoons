@@ -1,4 +1,5 @@
 import { Citation } from "../12-SourcesCited";
+import { MoreDetails } from "../../MoreDetails";
 import style from "./index.module.css";
 
 import world from "./resources/world.svg";
@@ -6,7 +7,7 @@ import raccoon from "../../resources/google-noto/raccoon.svg";
 
 //Source: https://www.nationalgeographic.com/animals/article/raccoons-expanding-range-climate-change
 
-export function RangeMap(props) {
+export function DistributionMap(props) {
   return (
     <div className={style.mapContainer + " " + (props.showInvasive ? style.invasive : "")}>
       <img className={style.map} src={world} alt="A map of the world showing where raccoons can be found." />
@@ -26,10 +27,11 @@ export function RangeMap(props) {
 export function Slide2() {
   return (
     <div className={style.container}>
-      <h2>Range<Citation name="range" /></h2>
+      <h2>Distribution<Citation name="range" /></h2>
       <div className={style.narrowMapContainer}>
-        <RangeMap />
+        <DistributionMap />
       </div>
+      <MoreDetails>Although they're native to North America, raccoons can be found in many places across the globe</MoreDetails>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { RangeMap } from "../2-DistributionMap";
+import { DistributionMap } from "../2-DistributionMap";
 import { Citation } from "../12-SourcesCited";
 import tableStyle from "../../resources/table.module.css";
 import style from "./index.module.css";
@@ -18,7 +18,7 @@ export function Slide6() {
           </ul>
         </div>
         <div>
-          <RangeMap showInvasive={true} />
+          <DistributionMap showInvasive={true} />
         </div>
       </div>
     </div>
