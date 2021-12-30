@@ -1,3 +1,4 @@
+import { Component } from "react";
 import style from "./index.module.css";
 
 //Unnecessarily convoluted you say? Yes, absolutely. I whole-heartedly agree.
@@ -24,15 +25,37 @@ export function Citation(props) {
   )
 }
 
-export function Slide12() {
+function Slide12Component(props) {
   return (
     <div>
       <h2>Works cited</h2>
       <ol className={style.citationList}>
         {
-          Object.values(sources).map((source, index) => <li id={"raccoon-citation" + (index + 1)} key={index}>{source}</li>)
+          Object.values(sources).map((source, index) => {
+            const id = "raccoon-citation" + (index + 1);
+
+            return <li id={id} key={index} className={("#"+id) === props.hash ? style.selectedCitation : null}>{source}</li>
+          })
         }
       </ol>
     </div>
   )
 }
+
+function WithHash(C) {
+  return class extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {hash: window.location.hash};
+
+      window.addEventListener("hashchange", () => this.setState({hash: window.location.hash}));
+    }
+   
+    render() {
+      return <C hash={this.state.hash} {...this.props} />
+    }
+  }
+}
+
+export const Slide12 = WithHash(Slide12Component);
