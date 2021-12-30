@@ -45,14 +45,21 @@ export class BasicSlideshow extends Component {
           facing="left" 
         />
 
-        <div 
-          className={
-            style.navContent + 
-            " " + 
-            (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
-          }
-        >
-          {this.props.children.map((e, i) => <div className={(i === this.state.slide) ? null : style.noDisplay} key={i}>{e}</div>)}
+        <div className={style.navContent}>
+          <div className={style.slideContainer}>
+            {
+              this.props.children.map((e, i) => (
+                <div 
+                  className={
+                    style.slide
+                    + " " + (this.state.slide === i ? style.fadeOut : "")
+                    + " " + (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
+                  } 
+                  key={i}
+                >{e}</div>
+              ))
+            }
+          </div>
         </div>
 
         <NavButton 

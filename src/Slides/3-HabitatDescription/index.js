@@ -21,6 +21,15 @@ function FastFacts(props) {
 
 export function Slide3() {
   return (
+    <BasicSlideshow>
+      <img className={style.biomeExample} src={forest} />
+      <img className={style.biomeExample} src={forestChart} />
+    </BasicSlideshow>
+  )
+}
+
+function OldSlide3() {
+  return (
     <div>
       <h2>Habitat<Citation name={["maine", "chesapeakebay"]} /></h2>
       <BasicSlideshow slideChangeDelay={5000}>

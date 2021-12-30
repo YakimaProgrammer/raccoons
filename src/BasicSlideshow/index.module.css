@@ -28,18 +28,24 @@
 
 .navContent{
   width: 80%;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.fadeOut {
-  opacity: 0;
 }
 
 .navButton, .navContent {
   display: table-cell;
 }
 
-.noDisplay {
-  display: none;
+.slideContainer {
+  display: grid;
+}
+
+.slide {
+  opacity: 1;
+  transition: opacity .5s ease;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* MUST be defined after .slide to take precedence */
+.fadeOut {
+  opacity: 0;
 }
