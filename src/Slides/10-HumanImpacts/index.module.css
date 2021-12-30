@@ -1,0 +1,11 @@
+.tableOverride > div {
+  vertical-align: top;
+  width: 34%;
+}
+
+.tableOverride > div > img {
+  display: block;
+  max-width: 98%;
+  max-height: 40vh;
+  margin: auto
+}

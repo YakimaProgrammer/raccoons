@@ -5,6 +5,8 @@ import { Slide3 } from "./3-HabitatDescription";
 import { Slide4 } from "./4-FoodWeb";
 import { Slide5 } from "./5-ReproductiveCapacity";
 import { Slide6 } from "./6-FunctionalRole";
+import { Slide10 } from "./10-HumanImpacts";
+import { Slide11 } from "./11-OtherInfo";
 import { Slide12 } from "./12-SourcesCited";
 
 export function Slides() {
@@ -32,6 +34,14 @@ export function Slides() {
 
       <BasicSlide>
         <Slide6 />
+      </BasicSlide>
+
+      <BasicSlide>
+        <Slide10 />
+      </BasicSlide>
+
+      <BasicSlide>
+        <Slide11 />
       </BasicSlide>
 
       <BasicSlide>
