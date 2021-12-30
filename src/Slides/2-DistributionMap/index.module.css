@@ -3,11 +3,14 @@
 }
 
 .mapContainer {
+  position: relative;
+}
+
+.narrowMapContainer {
   width: 80%;
   display: block;
   height: auto;
   margin: auto;
-  position: relative;
 }
 
 .map {

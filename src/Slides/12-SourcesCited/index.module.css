@@ -1,0 +1,5 @@
+/* gotta have that hanging indent, ya know? */
+.citationList > li > p {
+  text-indent: -1em;
+  margin-left: 2em;
+}

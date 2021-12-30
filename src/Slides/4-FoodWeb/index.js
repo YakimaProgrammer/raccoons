@@ -1,5 +1,6 @@
 import {default as LineTo} from "react-lineto";
 import { PageLoadWatcher } from "../../PageLoaderWatcher";
+import { Citation } from "../12-SourcesCited";
 
 //foods
 import acorn from "../../resources/flaticon.com/acorn.png";
@@ -9,6 +10,7 @@ import grass from "../../resources/flaticon.com/grass.png";
 import mussel from "../../resources/flaticon.com/mussel.png";
 import apple from "../../resources/google-noto/apple.svg";
 import bird from "../../resources/google-noto/bird.svg";
+import egg from "../../resources/google-noto/egg.svg";
 import cherry from "../../resources/google-noto/cherry.svg";
 import corn from "../../resources/google-noto/corn.svg";
 import fish from "../../resources/google-noto/fish.svg";
@@ -33,14 +35,14 @@ import style from "./index.module.css";
 
 //https://www.maine.gov/ifw/docs/raccoon-speciesassessmant.pdf
 
-const prey = [style.acorn, style.bud, style.crayfish, style.grass, style.mussel, style.apple, style.bird, style.cherry, style.corn, style.fish, style.frog, style.insect, style.mouse, style.reptile, style.trash];
+const prey = [style.acorn, style.bud, style.crayfish, style.grass, style.mussel, style.apple, style.bird, style.egg, style.cherry, style.corn, style.fish, style.frog, style.insect, style.mouse, style.reptile, style.trash];
 const predators = [style.cougar, style.coyote, style.dog, style.hawk, style.owl, style.snake, style.person];
 
 //LineTo is rather finicky, so I have to micromanage it along a little bit
 function Slide4Component(props) {
   return (
     <div>
-      <h2>Raccoons in the food web</h2>
+      <h2>Raccoons in the food web<Citation name={["maine", "chesapeakebay", "depOfFish"]} /></h2>
       <div className={style.foodsContainer}>
         <div className={style.foods}>
           <img src={acorn} className={style.acorn} alt='' />
@@ -50,6 +52,7 @@ function Slide4Component(props) {
           <img src={mussel} className={style.mussel} alt='' />
           <img src={apple} className={style.apple} alt='' />
           <img src={bird} className={style.bird} alt='' />
+          <img src={egg} className={style.egg} alt='' />
           <img src={cherry} className={style.cherry} alt='' />
           <img src={corn} className={style.corn} alt='' />
           <img src={fish} className={style.fish} alt='' />

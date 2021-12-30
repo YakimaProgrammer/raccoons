@@ -1,15 +1,3 @@
-.asTable {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
-
-.asTable > div {
-  display: table-cell;
-  width: 50%;
-  vertical-align: middle;
-}
-
 .halfRaccoon {
   clip-path: polygon(0% 0%, 0% 100%, 60% 100%, 60% 0%);
 }

@@ -17,7 +17,7 @@
   margin: auto;
 }
 
-.acorn, .bud, .crayfish, .grass, .mussel, .apple, .bird, .cherry, .corn, .fish, .frog, .insect, .mouse, .reptile, .trash, .cougar, .coyote, .dog, .hawk, .owl, .snake, .person {
-  /* Kind of a no-op so that I can use these classes later on with react-lineto, without polluting the global namespace*/
+.acorn, .bud, .crayfish, .grass, .mussel, .apple, .bird, .egg, .cherry, .corn, .fish, .frog, .insect, .mouse, .reptile, .trash, .cougar, .coyote, .dog, .hawk, .owl, .snake, .person {
+  /* Kind of a no-op so that I can use these classes later on with react-lineto, without polluting the global namespace. But also kind of important*/
   z-index: 1;
 }
