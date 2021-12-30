@@ -22,11 +22,11 @@ export function Slide3() {
           <h3>Forests</h3>
           <div className={tableStyle.asTable}>
             <div>
-              <img className={style.biomeExample} src={forest} />
+              <img className={style.biomeExample} src={forest} alt="" />
               <p className={style.center}>Although not at Knoxville, Tennessee, a raccoon can be seen foraging for insects in the soil</p>
             </div>
             <div>
-              <img className={style.biomeExample} src={forestChart} />
+              <img className={style.biomeExample} src={forestChart} alt="" />
               <ul className={style.fastFacts}>
                 <li>Moderate average temperatures</li>
                 <li>Consistent, abundant rainfall</li>
@@ -41,13 +41,13 @@ export function Slide3() {
 
         <div>
           <h3>Urban Areas</h3>
-          <img className={style.biomeExample} src={urban} />
+          <img className={style.biomeExample} src={urban} alt="" />
           <p className={style.center}>Raccoons are notorious for breaking into houses and garbage cans, earning them the moniker of <i>trash panda</i></p>
         </div>
 
         <div>
           <h3>Farms</h3>
-          <img className={style.biomeExample} src={farm} />
+          <img className={style.biomeExample} src={farm} alt="" />
           <p className={style.center}>Raccoons hold no qualms against raiding local farmland for food</p>
         </div>
 
@@ -55,11 +55,11 @@ export function Slide3() {
           <h3>Swamps &amp; Marshes</h3>
           <div className={tableStyle.asTable}>
             <div>
-              <img className={style.biomeExample} src={marsh} />
+              <img className={style.biomeExample} src={marsh} alt="" />
               <p className={style.center}>While not at the marsh found at Whitewood Township, South Dakota, a raccoon can be seen fishing for its next meal in the water</p>
             </div>
             <div>
-              <img className={style.biomeExample} src={marshChart} />
+              <img className={style.biomeExample} src={marshChart} alt="" />
               <ul className={style.fastFacts}>
                 <li>Highly productive ecosystem</li>
                 <li>Some wetlands go years without water</li>

@@ -14,7 +14,7 @@ const sources = {
   depOfFish: <p>Washington Department of Fish &amp; Wildlife. (2021). <i>Raccoons.</i> Retrieved December 30, 2021, from https://wdfw.wa.gov/species-habitats/species/procyon-lotor</p>
 };
 
-const toNumber = Object.keys(sources).map((key, index) => [key, index + 1]).reduce((acc, curr) => (acc[curr[0]] = curr[1], acc),{});
+const toNumber = Object.keys(sources).map((key, index) => [key, index + 1]).reduce((acc, curr) => {acc[curr[0]] = curr[1]; return acc},{});
 
 export function Citation(props) {
   const names = typeof props.name === "object" ? props.name : [props.name];
