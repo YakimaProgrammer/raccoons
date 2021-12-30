@@ -52,7 +52,7 @@ export class BasicSlideshow extends Component {
                 <div 
                   className={
                     style.slide
-                    + " " + (this.state.slide === i ? style.fadeOut : "")
+                    + " " + (this.state.slide !== i ? style.fadeOut : "")
                     + " " + (this.state.transitionState === "fadeOut" ? style.fadeOut : "")
                   } 
                   key={i}
