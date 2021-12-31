@@ -1,0 +1,11 @@
+.asTable {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.asTable > div {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}

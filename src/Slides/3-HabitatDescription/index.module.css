@@ -1,0 +1,17 @@
+.biomeExample {
+  max-width: 96%;
+  max-height: 50vh;
+  display: block;
+  margin: auto;
+  padding: 2%;
+}
+
+.fastFacts {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+
+.center {
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+/* If the window is too narrow, make this a column*/
+.multiRowTable {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.multiRowTable > div {
+  display: table-row;
+}
+
+.multiRowTable > div > div {
+  vertical-align: top;
+  width: 34%;
+  display: table-cell;
+}
+
+.icon {
+  display: block;
+  max-height: 40vh;
+  margin: auto
+}

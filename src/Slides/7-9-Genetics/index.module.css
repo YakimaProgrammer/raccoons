@@ -1,0 +1,54 @@
+.biohazardRaccoon {
+  mask-image: url("../../resources/google-noto/raccoon-mask.svg");
+  opacity: .15;
+}
+
+.rabidRaccoon {
+  display: grid;
+}
+
+.rabidRaccoon > img, .rabidRaccoon > svg {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.raccoonPreview {
+  height: calc(40vh - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.raccoonPreview > svg, .rabidRaccoon > img, .rabidRaccoon > svg {
+  height: calc(var(--dynamic-height) - 32px);
+}
+
+.raccoonPreview > svg, .rabidRaccoon > img, .rabidRaccoon > svg, .tailRings {
+  display: block;
+  margin: auto;
+}
+
+.tailRings {
+  height: 32px;
+}
+
+.tailRings > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.inputSlidersContainer {
+  display: block;
+  width: fit-content;
+  margin: auto ;
+}
+
+.inputSliders > p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tableOverride > div {
+  vertical-align: top;
+}

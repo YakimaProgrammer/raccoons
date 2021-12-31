@@ -1,0 +1,15 @@
+/* gotta have that hanging indent, ya know? */
+.citationList > li > p {
+  text-indent: -1em;
+  margin-left: 2em;
+  overflow-wrap: break-word;
+}
+
+.citationList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.selectedCitation {
+  background-color: rgba(255, 255, 0, 0.25);
+}

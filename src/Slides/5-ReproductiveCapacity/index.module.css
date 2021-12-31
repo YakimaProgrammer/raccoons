@@ -1,0 +1,21 @@
+.halfRaccoon {
+  clip-path: polygon(0% 0%, 0% 100%, 60% 100%, 60% 0%);
+}
+
+/* for use with react-lineto */
+.srcRaccoon, .targetRaccoon1, .targetRaccoon2, .targetRaccoon3, .targetRaccoon4 {
+  width: 128px;
+  max-width: 80%;
+  height: auto;
+}
+
+.verticalRaccoons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inTheMiddle {
+  margin: auto;
+  display: block;
+}
