@@ -48,3 +48,7 @@
   align-items: center;
   gap: 5px;
 }
+
+.tableOverride > div {
+  vertical-align: top;
+}

@@ -1,4 +1,5 @@
 import { Component, createRef, Fragment } from "react";
+import { Citation } from "../12-SourcesCited"
 
 import tableStyle from "../../resources/table.module.css";
 import style from "./index.module.css";
@@ -90,16 +91,16 @@ class RaccoonCustomizer extends Component {
         <div>
           <div className={style.inputSlidersContainer}>
             <div className={style.inputSliders}>
-              <p>Number of tail rings: <input ref={this.ringRef} onInput={this.onInput} type="range" min="5" max="10" value={this.state.numberOfRings} /></p>
+              <p>Number of tail rings - {this.state.numberOfRings}: <input ref={this.ringRef} onInput={this.onInput} type="range" min="5" max="10" value={this.state.numberOfRings} /></p>
               <p>Color: <input ref={this.colorRef} onInput={this.onInput} type="range" min="0" max="100" value={this.state.color} /></p>
-              <p>Length head to tail: <input ref={this.lengthRef} onInput={this.onInput} type="range" min="75" max="90" value={this.state.length} /></p>
+              <p>Length head to tail - {this.state.length} cm: <input ref={this.lengthRef} onInput={this.onInput} type="range" min="75" max="90" value={this.state.length} /></p>
               <p>Rabies resistant? <input type="checkbox" ref={this.rabiesResistantRef} onChange={this.onInput} checked={this.state.rabiesResistant} /></p>
             </div>
           </div>
         </div>
 
         <div>
-          <div className={style.raccoonPreview} style={{"--dynamic-height": (((this.state.length - 75) / 15) * 20 + 20) + "vh"}}>
+          <div className={style.raccoonPreview} style={{"--dynamic-height": (((this.state.length - 75) / 15) * 20 + 10 + (window.innerWidth > window.innerHeight ? 10 : 0)) + "vh"}}>
             <Raccoon headColor={headColor} faceColor={faceColor}/>
           </div>
 
@@ -124,8 +125,28 @@ class RaccoonCustomizer extends Component {
 export function Slide7() {
   return (
     <div>
-      <h3>Genetics</h3>
+      <h3>Genetics<Citation name={["pubmed", "britannica"]} /></h3>
       <RaccoonCustomizer />
+
+      <div className={tableStyle.asTable + " " + style.tableOverride}>
+        <div>
+          <h3>Raccoons are also well adapted to their environment</h3>
+          <ul>
+            <li>Dexterous forepaws that allow for easy manipulation of the surrounding environment</li>
+            <li>Omniverous, oppertunistic eaters</li>
+            <li>Proficent swimmers &amp; climbers</li>
+            <li>Can enter periods of dormancy in the winter time</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Potential future adaptations</h3>
+          <ol>
+            <li>Although not currently detected in a significant manner in the wild population, raccoons may begin to select for rabies resistance. Rabies, and other diseases, are often the cause of death for raccoons, rather than predation.</li>
+            <li>Warming trends in some areas may shorten the periods of food scarcity in the winter, which may lead some raccoons to lose their ability to store up body fat and go dormant for the winter months</li>
+          </ol>
+        </div>
+      </div>
     </div>
   )
 }
