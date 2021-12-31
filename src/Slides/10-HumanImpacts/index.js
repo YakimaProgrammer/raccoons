@@ -10,7 +10,7 @@ function Impact(props) {
   return (
     <div>
       <h3>{props.area}<Citation name={props.source} /></h3>
-      <img src={props.src} />
+      <img src={props.src} alt="" />
     </div>
   )
 }

@@ -28,7 +28,7 @@ function RabidRaccoon(props) {
   return (
     <div className={style.rabidRaccoon}>
       <CustomizableRaccoon {...props} eyeColor="#FF0000" />
-      <img src={biohazard} className={style.biohazardRaccoon} />
+      <img src={biohazard} className={style.biohazardRaccoon} alt="" />
     </div>
   )
 }

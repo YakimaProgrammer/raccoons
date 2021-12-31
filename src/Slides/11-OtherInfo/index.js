@@ -1,5 +1,4 @@
 import { Citation } from "../12-SourcesCited";
-import tableStyle from "../../resources/table.module.css";
 import style from "./index.module.css";
 
 import biohazard from "../../resources/google-noto/biohazard.svg";
@@ -20,10 +19,10 @@ export function Slide11() {
         </div>
         <div>
           <div>
-            <img className={style.icon} src={biohazard} />
+            <img className={style.icon} src={biohazard} alt="" />
           </div>
           <div>
-            <img className={style.icon} src={raccoon} />
+            <img className={style.icon} src={raccoon} alt="" />
           </div>
         </div>
       </div>
