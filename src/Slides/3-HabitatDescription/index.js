@@ -66,7 +66,7 @@ export function Slide3() {
                 <li>Others have water year-round</li>
                 <li>Important habitat for many foundation species</li>
                 <li>Lack peat soils</li>
-                <li>Lacky of woody vegitation</li>
+                <li>Lack of woody vegetation</li>
                 <li>Abundance of grasses and sedges that can grow in soggier conditions</li>
               </ul>
             </div>

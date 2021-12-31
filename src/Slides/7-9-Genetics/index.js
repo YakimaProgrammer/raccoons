@@ -133,8 +133,8 @@ export function Slide7() {
           <h3>Raccoons are also well adapted to their environment</h3>
           <ul>
             <li>Dexterous forepaws that allow for easy manipulation of the surrounding environment</li>
-            <li>Omniverous, oppertunistic eaters</li>
-            <li>Proficent swimmers &amp; climbers</li>
+            <li>Omnivorous, opportunistic eaters</li>
+            <li>Proficient swimmers &amp; climbers</li>
             <li>Can enter periods of dormancy in the winter time</li>
           </ul>
         </div>
