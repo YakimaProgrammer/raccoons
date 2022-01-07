@@ -1,6 +1,7 @@
 import { Citation } from "../12-SourcesCited";
 import style from "./index.module.css";
 
+import wash from "./resources/animals.howstuffworks.com.webp";
 import biohazard from "../../resources/google-noto/biohazard.svg";
 import raccoon from "../../resources/google-noto/raccoon.svg";
 
@@ -11,6 +12,9 @@ export function Slide11() {
       <div className={style.multiRowTable}>
         <div>
           <div>
+            <h3>Raccoons are known for "washing" their food. In reality, their forepaws become more sensitive when wet, allows them to better examine their food.<Citation name={["howstuffworks","pbs"]} /></h3>
+          </div>
+          <div>
             <h3>Raccoons account for 30.3% of reported rabies incidence in wild animals<Citation name="cdc" /></h3>
           </div>
           <div>
@@ -18,6 +22,9 @@ export function Slide11() {
           </div>
         </div>
         <div>
+          <div>
+            <img className={style.icon} src={wash} alt="" />
+          </div>
           <div>
             <img className={style.icon} src={biohazard} alt="" />
           </div>

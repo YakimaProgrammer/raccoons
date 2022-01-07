@@ -81,7 +81,73 @@
   top: 25%;
 }
 
+.northern_russia {
+  position: absolute;
+  width: 5%;
+  left: 70%;
+  top: 5%;
+}
+
+.northern_afria {
+  position: absolute;
+  width: 5%;
+  left: 50%;
+  top: 35%;
+}
+
+.northern_south_america {
+  position: absolute;
+  width: 5%;
+  left: 29%;
+  top: 53%;
+}
+
+.northern_canada {
+  position: absolute;
+  width: 5%;
+  left: 27%;
+  top: 5%;
+}
+
+.india {
+  position: absolute;
+  width: 3%;
+  left: 69.5%;
+  top: 37.5%;
+}
+
+.saudiArabiaArea {
+  position: absolute;
+  width: 3%;
+  left: 60%;
+  top: 37%;
+}
+
+.northern_australia {
+  position: absolute;
+  width: 3%;
+  left: 85%;
+  top: 65%;
+}
+
+.indonesian_area {
+  position: absolute;
+  width: 3%;
+  left: 80%;
+  top: 55%;
+}
+
 /* img(1) -> the map, img(2) -> north america */
 .invasive > img:not(:first-child):not(:nth-child(2)) {
   filter: invert(24%) sepia(99%) saturate(6982%) hue-rotate(1deg) brightness(101%) contrast(122%);
+}
+
+/* This is my new favorite hack using css grids */
+.noRaccoon {
+  display: grid;
+}
+
+.noRaccoon > img {
+  grid-column: 1;
+  grid-row: 1;
 }

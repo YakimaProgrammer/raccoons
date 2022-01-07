@@ -3,9 +3,18 @@ import { MoreDetails } from "../../MoreDetails";
 import style from "./index.module.css";
 
 import world from "./resources/world.svg";
+import noSign from "./resources/freesvg.org.svg";
 import raccoon from "../../resources/google-noto/raccoon.svg";
-
 //Source: https://www.nationalgeographic.com/animals/article/raccoons-expanding-range-climate-change
+
+function NoRaccoon(props) {
+  return (
+    <div className={props.className + " " + style.noRaccoon}>
+      <img src={raccoon} alt={`Raccoons are currently not found in ${props.country}`} />
+      <img src={noSign} alt="" />
+    </div>
+  )
+}
 
 export function DistributionMap(props) {
   return (
@@ -20,6 +29,14 @@ export function DistributionMap(props) {
       <img className={style.australia} src={raccoon} alt="Raccoons have been found in Australia." />
       <img className={style.china} src={raccoon} alt="Raccoons have been found in China." />
       <img className={style.east_middle_east_area} src={raccoon} alt="Raccoons have been found in the Iran / east Middle East area." />
+      <NoRaccoon className={style.northern_russia} country="northern Russia" />
+      <NoRaccoon className={style.northern_afria} country="northern Africa" />
+      <NoRaccoon className={style.northern_south_america} country="northern South America" />
+      <NoRaccoon className={style.northern_canada} country="northern Canada" />
+      <NoRaccoon className={style.india} country="India" />
+      <NoRaccoon className={style.saudiArabiaArea} country="the Saudi Arabia area" />
+      <NoRaccoon className={style.northern_australia} country="northern Australia" />
+      <NoRaccoon className={style.indonesian_area} country="Indonesian area" />
     </div>
   )
 }
