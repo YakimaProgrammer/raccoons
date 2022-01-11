@@ -12,7 +12,7 @@ export function Slide11() {
       <div className={style.multiRowTable}>
         <div>
           <div>
-            <h3>Raccoons are known for "washing" their food. In reality, their forepaws become more sensitive when wet, allows them to better examine their food.<Citation name={["howstuffworks","pbs"]} /></h3>
+            <h3>Raccoons are known for "washing" their food. This isn't to clean their next meal - a raccoon's forepaws become more sensitive when wet, which allows them to better examine their food<Citation name={["howstuffworks","pbs"]} /></h3>
           </div>
           <div>
             <h3>Raccoons account for 30.3% of reported rabies incidence in wild animals<Citation name="cdc" /></h3>

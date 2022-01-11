@@ -11,7 +11,8 @@ export function Slide6() {
         <div>
           <ul className={style.rolesOfRaccoons}>
             <li><b>Native</b> to North America</li>
-            <li><b>Non-Native</b> everywhere else</li>
+            <li><b>Non-Native</b> and <b>invasive</b> everywhere else</li>
+            <li>A <b>generalist</b> that will survive almost anywhere with water</li>
             <li><b>Contribute to soil turnover</b> by foraging for insects</li>
             <li><b>Aid plant reproduction</b> by dispersing seeds</li>
             <li><b>Predator of wasps</b>, which helps local bee populations</li>
